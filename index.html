@@ -1,1 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Apresentação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Adicione um link para o ícone Java -->
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/black-48x48-icons/48/Java.png" type="image/x-icon">
+    <!-- Adicione um link para a biblioteca FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #010409;
+            /* Cor de fundo escura */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #161b22;
+            /* Cor da navbar */
+            padding: 5px 0;
+            --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.75);
+            --bs-navbar-color: rgba(255, 255, 255, 0.75);
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .navbar-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+
+        .navbar-expand-lg .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 25px;
+            padding: 10px 20px;
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link:hover {
+            text-decoration: none;
+            background-color: #0E131A;
+            /* Cor de fundo do link no hover */
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 30px 0;
+        }
+
+        .container-nav {
+            padding: 10px 0;
+        }
+
+        .left-column {
+            background-color: #0E131A;
+            /* Cor de fundo do lado esquerdo */
+            padding: 30px;
+            border-radius: 10px;
+            /* Borda mais arredondada */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .left-column h2 {
+            font-size: 28px;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            /* Linha inferior */
+            padding-bottom: 10px;
+            /* Espaçamento inferior */
+        }
+
+        .left-column p {
+            font-size: 18px;
+            color: #cccccc;
+            /* Cor do texto no lado esquerdo */
+        }
+
+        .languages {
+            list-style-type: none;
+        }
+
+        .languages li {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #cccccc;
+            /* Cor do texto no lado esquerdo */
+        }
+
+        .right-column {
+            background-color: #0E131A;
+            /* Cor de fundo do lado direito */
+            padding: 30px;
+            border-radius: 10px;
+            /* Borda mais arredondada */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .right-column h2 {
+            font-size: 28px;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            /* Linha inferior */
+            padding-bottom: 10px;
+            /* Espaçamento inferior */
+        }
+
+        .right-column p {
+            font-size: 18px;
+            color: #cccccc;
+            /* Cor do texto no lado direito */
+        }
+
+        .footer {
+            background-color: #161b22;
+            /* Cor do rodapé */
+            color: #ffffff;
+            /* Cor do texto no rodapé */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 24px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons i {
+            font-size: 32px;
+            margin: 0 10px;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-brand:hover,
+        .navbar-brand:focus {
+            color: #ffffff;
+        }
+
+        /* Estilize a imagem para adicionar um formato circular */
+        .right-column img {
+            max-width: 100%;
+            /* Defina a largura máxima para 100% do elemento pai */
+            height: auto;
+            /* Mantenha a proporção original da imagem */
+            width: 64px;
+            /* Tamanho da imagem */
+            height: 64px;
+            margin-right: 10px;
+            /* Espaçamento à direita do texto */
+            border-radius: 50%;
+            /* Formato circular */
+        }
+
+        /* Estilize o h3 */
+        .right-column h3 {
+            font-size: 24px;
+            /* Tamanho menor do texto */
+            color: #ffffff;
+            /* Cor branca */
+            display: flex;
+            align-items: center;
+            /* Alinhe verticalmente o texto e a imagem */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            /* Espaçamento superior de 15px */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-nav container">
+            <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+                <img src="https://media.licdn.com/dms/image/D4D03AQFSyDkEmwD4gw/profile-displayphoto-shrink_800_800/0/1683777761645?e=1699488000&v=beta&t=tjKlcBHQHgobD8ZmOOPbRQRNSH4YNfTX4TXY0JqEmcw"
+                    alt="Foto de Perfil" style="width: 130px; height: 130px; border-radius: 50%; margin-right: 30px;">
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-size: 32px; margin-bottom: 0;">Gabriel Guilherme</span>
+                    <span style="font-size: 18px; margin-top: 0;">Desenvolvedor Java</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="left-column">
+                    <h2>Contato</h2>
+                    <p>Email: seuemail@example.com<br>Telefone: (123) 456-7890<br>GitHub: <a
+                            href="https://github.com/seuusername" target="_blank">github.com/seuusername</a></p>
+                    <h2>Linguagens de Programação</h2>
+                    <ul class="languages">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Ruby</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+
+                <div class="right-column">
+                    <h2>Carreira Acadêmica</h2>
+                    <h3><img src="img/imd.jpg" alt="Instituto Metrópole Digital - IMD/UFRN" />
+                        <div>Técnico em Redes de Computadores
+                            <p style="font-size: 18px; margin: 0;">Instituto Metrópole Digital - IMD/UFRN</p>
+                            <p style="font-size: 14px; margin: 0;">2016 - 2018</p>
+                        </div>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. ...Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        ...Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. ...Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        ...Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. ...</p>
+
+                    <h3><img src="img/ufersa.jpg" alt="Universidade Federal Rural do Semi-árido - UFERSA" />
+                        <div>Bacharelado em Sistemas de Informação
+                            <p style="font-size: 18px; margin: 0;">Universidade Federal Rural do Semi-Árido</p>
+                            <p style="font-size: 14px; margin: 0;">2017 - Atual</p>
+                        </div>
+                    </h3>
+                    <p>Phasellus sed risus ut libero vestibulum malesuada in ac urna. ...Phasellus sed risus ut libero
+                        vestibulum malesuada in ac urna. ...Phasellus sed risus ut libero vestibulum malesuada in ac
+                        urna. ...Phasellus sed risus ut libero vestibulum malesuada in ac urna. ...Phasellus sed risus
+                        ut libero vestibulum malesuada in ac urna. ...Phasellus sed risus ut libero vestibulum malesuada
+                        in ac urna. ...Phasellus sed risus ut libero vestibulum malesuada in ac urna. ...</p>
+
+                    <h2>Carreira Profissional</h2>
+                    <h3><img src="img/compass_uol.jpg" alt="Logo da Empresa" />
+                        <div>
+                            <span>Estagiário</span>
+                            <p style="font-size: 18px; margin: 0;">Compass UOL</p>
+                            <p style="font-size: 14px; margin: 0;">2023 - Atual</p>
+                        </div>
+                    </h3>
+                    <p>Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...Nulla vitae varius tortor. Fusce sollicitudin vel elit non varius. ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="contato">
+        <p>Siga-me nas redes sociais:</p>
+        <div class="social-icons">
+            <a href="https://github.com/gabrielggui" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gabrielggui" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Adicione os links para os arquivos JS do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
