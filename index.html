@@ -18,6 +18,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            position: relative;
+            min-height: 100vh;
         }
 
         .navbar {
@@ -59,6 +61,7 @@
 
         .container {
             padding: 30px 0;
+            margin-bottom: 0px;
         }
 
         .container-nav {
@@ -72,6 +75,10 @@
             border-radius: 10px;
             /* Borda mais arredondada */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: white;
         }
 
         .left-column h2 {
@@ -107,6 +114,7 @@
             border-radius: 10px;
             /* Borda mais arredondada */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 60px;
         }
 
         .right-column h2 {
@@ -126,11 +134,13 @@
 
         .footer {
             background-color: #161b22;
-            /* Cor do rodapé */
             color: #ffffff;
-            /* Cor do texto no rodapé */
             text-align: center;
             padding: 20px 0;
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+            text-align: center;
         }
 
         .footer a {
@@ -164,9 +174,9 @@
             /* Defina a largura máxima para 100% do elemento pai */
             height: auto;
             /* Mantenha a proporção original da imagem */
-            width: 64px;
+            width: 58px;
             /* Tamanho da imagem */
-            height: 64px;
+            height: 58px;
             margin-right: 10px;
             /* Espaçamento à direita do texto */
             border-radius: 50%;
@@ -175,7 +185,7 @@
 
         /* Estilize o h3 */
         .right-column h3 {
-            font-size: 24px;
+            font-size: 20px;
             /* Tamanho menor do texto */
             color: #ffffff;
             /* Cor branca */
@@ -198,11 +208,17 @@
         }
 
         #navbar-img {
-                width: 130px;
-                height: 130px;
-                border-radius: 50%;
-                margin-right: 30px;
-            }
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+
+        .languages-icon {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
 
         @media (max-width: 768px) {
             #navbar-name {
@@ -221,12 +237,14 @@
                 border-radius: 50%;
                 margin-right: 10px;
             }
-            .container-nav{
+
+            .container-nav {
                 margin-left: 15px;
                 margin-right: 15px;
             }
-            .left-column{
-                margin-bottom: 20px;
+
+            .left-column {
+                margin-bottom: 60px;
             }
         }
     </style>
@@ -241,7 +259,7 @@
                     alt="Foto de Perfil">
                 <div style="display: flex; flex-direction: column;">
                     <span id="navbar-name">Gabriel Guilherme</span>
-                    <span id="navbar-desc">Desenvolvedor Java</span>
+                    <span id="navbar-desc">Desenvolvedor Back-end</span>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -264,56 +282,104 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="left-column">
-                    <h2>Contato</h2>
-                    <p>Email: seuemail@example.com<br>Telefone: (123) 456-7890<br>GitHub: <a
-                            href="https://github.com/seuusername" target="_blank">github.com/seuusername</a></p>
-                    <h2>Linguagens de Programação</h2>
-                    <ul class="languages">
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>C++</li>
-                        <li>Ruby</li>
-                    </ul>
+                    <h2>Dados pessoais</h2>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Assu, Rio Grande do Norte, Brasil
+                    </p>
+                    <p><i class="fas fa-birthday-cake" style="margin-right: 8px;"></i>24 de Outubro de 1998
+                    </p>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i><a
+                            href="mailto:gabrielguilherme1000@hotmail.com">gabrielguilherme1000@hotmail.com</a></p>
+                    <p><i class="fab fa-linkedin" style="margin-right: 8px;"></i><a
+                            href="https://www.linkedin.com/in/gabrielggui"
+                            target="_blank">linkedin.com/in/gabrielggui</a></p>
+                    <p><i class="fab fa-github" style="margin-right: 8px;"></i><a href="https://github.com/gabrielggui"
+                            target="_blank">github.com/gabrielggui</a></p>
+
+                    <h2>Habilidades</h2>
+                    <div class="languages">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Java-Dark.svg"
+                            title="Java">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Spring-Dark.svg"
+                            title="Spring">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Hibernate-Dark.svg"
+                            title="Hibernate">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Maven-Dark.svg"
+                            title="Maven">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Gradle-Dark.svg"
+                            title="Gradle">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/MySQL-Dark.svg"
+                            title="MySQL">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/PostgreSQL-Dark.svg"
+                            title="Postgres">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/RabbitMQ-Dark.svg"
+                            title="RabbitMQ">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Docker.svg"
+                            title="Docker">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg" title="Git">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Linux-Dark.svg"
+                            title="Linux">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/AWS-Dark.svg"
+                            title="AWS">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/HTML.svg"
+                            title="HTML5">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CSS.svg"
+                            title="CSS3">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/JavaScript.svg"
+                            title="Javascript">
+                        <img class="languages-icon"
+                            src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Markdown-Dark.svg"
+                            title="Markdown">
+                    </div>
                 </div>
             </div>
             <div class="col-md-8">
 
                 <div class="right-column">
-                    <h2>Carreira Acadêmica</h2>
+                    <h2>Formação acadêmica</h2>
                     <h3><img src="img/imd.jpg" alt="Instituto Metrópole Digital - IMD/UFRN" />
                         <div>Técnico em Redes de Computadores
-                            <p style="font-size: 18px; margin: 0;">Instituto Metrópole Digital - IMD/UFRN</p>
-                            <p style="font-size: 14px; margin: 0;">2016 - 2018</p>
+                            <p style="font-size: 15px; margin: 0;">Instituto Metrópole Digital - IMD/UFRN</p>
+                            <p style="font-size: 15px; margin: 0;">2016 - 2018</p>
                         </div>
                     </h3>
 
                     <h3><img src="img/ufersa.jpg" alt="Universidade Federal Rural do Semi-árido - UFERSA" />
                         <div>Bacharelado em Sistemas de Informação
-                            <p style="font-size: 18px; margin: 0;">Universidade Federal Rural do Semi-Árido</p>
-                            <p style="font-size: 14px; margin: 0;">2017 - Atual</p>
+                            <p style="font-size: 15px; margin: 0;">Universidade Federal Rural do Semi-Árido</p>
+                            <p style="font-size: 15px; margin: 0;">2017 - Atual</p>
                         </div>
                     </h3>
 
-                    <h2>Carreira Profissional</h2>
+                    <h2>Experiência profissional</h2>
                     <h3><img src="img/compass_uol.jpg" alt="Logo da Empresa" />
                         <div>
                             <span>Estagiário</span>
-                            <p style="font-size: 18px; margin: 0;">Compass UOL</p>
-                            <p style="font-size: 14px; margin: 0;">2023 - Atual</p>
+                            <p style="font-size: 15px; margin: 0;">Compass UOL</p>
+                            <p style="font-size: 15px; margin: 0;">2023 - Atual</p>
                         </div>
                     </h3>
+
                 </div>
             </div>
         </div>
     </div>
-
     <div class="footer" id="contato">
-        <p>Siga-me nas redes sociais:</p>
-        <div class="social-icons">
-            <a href="https://github.com/gabrielggui" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/gabrielggui" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <p style="margin: 0;">&copy; 2023 Gabriel Guilherme</p>
     </div>
 
     <!-- Adicione os links para os arquivos JS do Bootstrap e jQuery -->
